@@ -25,10 +25,11 @@ public class Tests
         _driver.FindElement((By.XPath("//*[@id='flights-search-from']/div[2]/div[1]/div[2]/span[1]/div/div[2]/div[3]/div/strong[1]"))).Click();
         _driver.FindElement((By.XPath("//*[@id='bw-to']"))).SendKeys("Adana");
         _driver.FindElement((By.XPath("//*[@id='flights-search-from']/div[2]/div[2]/div[2]/span[1]/div/div[2]/div[3]/div/strong[1]"))).Click();
-        _driver.FindElement((By.XPath("//*[@id='tripType']"))).Click();
+        _driver.FindElement((By.XPath("/html/body/div[8]/main/div/div/div/hero-component/div[3]/div/div/div/div/div[1]/div/div/div[5]/div[3]/div/button"))).Click();
+        Thread.Sleep(1000);
         _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
-        _driver.FindElement((By.XPath("//*[@id='onewayTrip']"))).Click();
-        _driver.FindElement((By.XPath("//*[@id='flights-search-from']/div[4]/div[4]/div/div"))).Click();
+        _driver.FindElement((By.XPath("/html/body/div[8]/main/div/div/div/hero-component/div[3]/div/div/div/div/div[1]/div/div/div[5]/div[3]/div/div/ul/li[2]/a"))).Click();
+        _driver.FindElement((By.XPath("/html/body/div[8]/main/div/div/div/hero-component/div[3]/div/div/div/div/div[1]/div/div/div[5]/div[4]/div[4]/div/div[2]/div[2]/div[1]/table/tbody/tr[4]/td[1]"))).Click();
         Thread.Sleep(2000);
         _driver.FindElement((By.XPath("//*[@id='flights-search-from']/div[4]/div[4]/div/div[2]/div[2]/div[1]/table/tbody/tr[3]/td[6]"))).Click();
         _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
@@ -37,7 +38,8 @@ public class Tests
         Thread.Sleep(15000);
         _driver.FindElement((By.XPath("/html/body/app-root/div/booking-flight-selection-page/div/booking-flight-result-card[1]/div/div/div[3]/div/div[1]/a"))).Click();
         Thread.Sleep(2000);
-        _driver.FindElement((By.CssSelector("#fare-details-swiper-0001 > div > booking-fare-card:nth-child(1) > div > div:nth-child(5) > button"))).Click();
+        _driver.FindElement((By.CssSelector("#fare-details-swiper-0001 > div > booking-fare-card:nth-child(1) > div > div:nth-child(4) > button"))).Click();
+        Assert.AreEqual("https://booking.qatarairways.com/nsp/views/passenger.xhtml", _driver.Url);
     }
     
     [TearDown]

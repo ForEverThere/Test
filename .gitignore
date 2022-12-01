@@ -1,0 +1,6 @@
+*.db
+*.log
+bin/
+target/
+3.txt
+git.txt
